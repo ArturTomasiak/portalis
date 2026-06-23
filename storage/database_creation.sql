@@ -137,8 +137,8 @@ CREATE TABLE IF NOT EXISTS vessels (
     draft_m REAL,
     summer_draft_m REAL,
     dwt_t REAL,
-    gt REAL,  # gross tonnage
-    nt REAL,  # net   tonnage
+    gt REAL,
+    nt REAL,
 
     deck_area_m2 REAL,
     deck_strength_t_per_m2 REAL,
