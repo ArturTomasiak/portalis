@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS ports (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    unlocode TEXT,
+    name TEXT NOT NULL UNIQUE,
+    unlocode TEXT UNIQUE,
     country TEXT NOT NULL DEFAULT 'Poland',
 
     latitude REAL,
@@ -42,12 +42,12 @@ CREATE TABLE IF NOT EXISTS berths (
     length_m REAL,
     depth_m REAL,
 
-    max_loa_m REAL,   # max dlugosc statku
-    max_beam_m REAL,  # max szerokosc statku
-    max_draft_m REAL, # max zanurzenie statku 
-    max_dwt_t REAL,   # max nośność statku 
+    max_loa_m REAL,
+    max_beam_m REAL,
+    max_draft_m REAL, 
+    max_dwt_t REAL,
 
-    quay_load_t_per_m2 REAL, # dopuszczalne obciazenie nabrzeza
+    quay_load_t_per_m2 REAL,
 
     has_ro_ro INTEGER DEFAULT 0,
     has_rail_access INTEGER DEFAULT 0,
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS storage_areas (
     FOREIGN KEY (terminal_id) REFERENCES terminals(id)
 );
 
-CREATE TABLE IF NOT EXISTS crane (
+CREATE TABLE IF NOT EXISTS cranes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 
     terminal_id INTEGER,
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS crane_availability (
 
     notes TEXT,
 
-    FOREIGN KEY (crane_id) REFERENCES crane(id)
+    FOREIGN KEY (crane_id) REFERENCES cranes(id)
 );
 
 CREATE TABLE IF NOT EXISTS vessels (
@@ -208,17 +208,17 @@ CREATE TABLE IF NOT EXISTS port_conditions (
     FOREIGN KEY (port_id) REFERENCES ports(id)
 );
 
-CREATE TABLE IF NOT EXISTS shipowner (
+CREATE TABLE IF NOT EXISTS shipowners (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT,
+    name TEXT UNIQUE,
     full_address TEXT,
     email TEXT,
     website TEXT
 );
 
-CREATE TABLE IF NOT EXISTS port_shipowner (
+CREATE TABLE IF NOT EXISTS port_shipowners (
     port INTEGER,
     shipowner INTEGER,
     FOREIGN KEY (port) REFERENCES ports(id),
-    FOREIGN KEY (shipowner) REFERENCES shipowner(id)
+    FOREIGN KEY (shipowner) REFERENCES shipowners(id)
 );
