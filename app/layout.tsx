@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="${inter.variable} ${robotoCondensed.variable} ${ibmPlexSans.variable}" lang="en">
+    <html className={`${inter.variable} ${robotoCondensed.variable} ${ibmPlexSans.variable}`} lang="en">
       {children}
     </html>
   );

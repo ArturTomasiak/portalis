@@ -1,0 +1,230 @@
+@use "@/app/variables.scss" as *;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $primary;
+}
+
+header {
+    background-color: $primary;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        img {
+            height: 60px;
+            width: auto;
+        }
+    }
+    .companies {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        img {
+            height: 30px;
+            width: auto;
+        }
+        img.seaglobal {
+            filter: brightness(0) invert(1);
+        }
+        .slipform {
+            transform: translateY(-4px);
+        }
+    }
+}
+
+.search {
+  padding: 50px;
+  background-color: $secondary;
+  color: $primary;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  font-family: "Arial Narrow", Arial, sans-serif;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field {
+    margin-bottom: 17px;
+  }
+
+  .title,
+  .titile,
+  .field > label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .title,
+  .titile {
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    height: 25px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: #fff;
+    color: $primary;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+  }
+
+  input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    }
+
+  input:focus,
+  select:focus {
+    border-color: $primary;
+  }
+
+  .small-input {
+    width: 65px;
+  }
+
+  .coordinates {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    input {
+      width: 27px;
+    }
+
+    span {
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    span:nth-child(5) {
+      margin-right: 14px;
+    }
+  }
+
+  .unit-input,
+  .user-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      font-size: 13px;
+    }
+  }
+
+  .vessel-select {
+    width: 137px;
+    text-align: center;
+    text-align-last: center;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .plus-btn {
+    display: block;
+    margin-top: 5px;
+    margin-left: 65px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: $primary;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .months {
+    display: grid;
+    grid-template-columns: repeat(3, 66px);
+    gap: 10px 5px;
+    margin-top: 9px;
+
+    label {
+      margin: 0;
+    }
+
+    input {
+      display: none;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 25px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      background-color: #fff;
+      color: $primary;
+      font-size: 12px;
+      text-transform: lowercase;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    input:checked + span {
+      background-color: $primary;
+      color: $secondary;
+      border-color: $primary;
+    }
+  }
+
+  .search-btn,
+  .seach-btn {
+    width: 116px;
+    height: 30px;
+    margin-top: 65px;
+    margin-left: 42px;
+    border: 0;
+    border-radius: 12px;
+    background-color: $primary;
+    color: $secondary;
+    font-family: inherit;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+
+.results {
+    background-color: $primary;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .title {
+        color: $secondary;
+        p {
+            transform: translateY(-20px);
+        }
+    }
+}
