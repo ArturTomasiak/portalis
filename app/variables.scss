@@ -1,0 +1,39 @@
+$primary:   #071617;
+$secondary: #FFFFFF;
+
+@mixin inter-regular {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 400;
+}
+
+@mixin roboto-condensed-regular {
+  font-family: var(--font-roboto-condensed), sans-serif;
+  font-weight: 400;
+}
+
+@mixin ibm-plex-sans-medium {
+  font-family: var(--font-ibm-plex-sans), sans-serif;
+  font-weight: 500;
+}
+
+@mixin ibm-plex-sans-semibold {
+  font-family: var(--font-ibm-plex-sans), sans-serif;
+  font-weight: 600;
+}
+
+* {
+    @include inter-regular();
+}
+
+h1, h2, h3 {
+    @include ibm-plex-sans-semibold();
+}
+
+.subtitle {
+    @include roboto-condensed-regular();
+}
+
+.quote {
+    @include ibm-plex-sans-medium();
+    font-style: italic;
+}
