@@ -13,11 +13,26 @@ export default function Home() {
             </div>
         </header>
         <main>
-            <h1>The tool for maritime logistics analysis.</h1>
-            <p>Make maritime logistics research effortless. Our platform helps you evaluate and rank ports against your specific requirements, while an integrated report builder turns publicly available data into clear, decision-ready insights.</p>
-            <a href="/search">search</a>
-            <br></br>
-            <a href="/report">report</a>
+            <div className="section primary">
+                <div className="cta">
+                    <img src="/portalis_search.webp" alt="portalis logo"/>
+                    <p>Portalis Search analyzes ports against key criteria such as storage capacity, berth depth, quay specifications, crane availability, vessel limitations, and distance to the offshore location. The result is a clear list of ports that meet your storage, berth, and lifting requirements, ranked by proximity and operational suitability.</p>
+                </div>
+                <div className="quote">
+                    <p>Identify the most suitable ports for your offshore project with a ranked shortlist based on your operational requirements.</p>
+                </div>
+                <a href="/search">portalis search</a>
+            </div>
+            <div className="section secondary">
+                <div className="cta">
+                    <img src="/portalis_report.webp" alt="portalis logo"/>
+                    <p>The Portalis Report provides detailed port specifications, operational constraints, infrastructure data, contact points, weather forecast and references for further verification. It also identifies who to contact for pricing, availability, and non-public operational information. Each report is convertable to .docx as well as .pdf.</p>
+                    <a href="/report">portalis report</a>
+                </div>
+                <div className="quote">
+                    <p>Structured, project-specific port report prepared for offshore wind farm planning, logistics, and decision-making.</p>
+                </div>
+            </div>
         </main>
     </body>
   );

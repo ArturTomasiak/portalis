@@ -1,6 +1,6 @@
 import "./search.scss";
 
-const months = [
+const months : string[] = [
   "jan", "feb", "mar",
   "apr", "may", "jun",
   "jul", "aug", "sep",
