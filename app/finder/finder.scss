@@ -1,0 +1,56 @@
+@use "@/app/variables.scss" as *;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $primary;
+}
+
+header {
+    background-color: $primary;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        img {
+            height: 60px;
+            width: auto;
+        }
+    }
+    .companies {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        img {
+            height: 30px;
+            width: auto;
+        }
+        img.seaglobal {
+            filter: brightness(0) invert(1);
+        }
+        .slipform {
+            transform: translateY(-4px);
+        }
+    }
+}
+
+.search {
+    background-color: $secondary;
+    padding: 50px;
+}
+
+.results {
+    background-color: $primary;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .title {
+        color: $secondary;
+        p {
+            transform: translateY(-20px);
+        }
+    }
+}

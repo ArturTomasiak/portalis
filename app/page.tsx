@@ -17,7 +17,7 @@ export default function Home() {
             <p>Make maritime logistics research effortless. Our platform helps you evaluate and rank ports against your specific requirements, while an integrated report builder turns publicly available data into clear, decision-ready insights.</p>
             <a href="/finder">finder</a>
             <br></br>
-            <a href="/rapport">rapport</a>
+            <a href="/report">report</a>
         </main>
     </body>
   );
