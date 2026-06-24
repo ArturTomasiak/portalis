@@ -33,7 +33,7 @@ body::before {
 
 header {
     margin: 50px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,10 +58,50 @@ header {
     }
 }
 
-main {
+.section {
     color: $secondary;
     margin: 0 auto;
     padding: 50px;
-    width: 70vw;
+    width: 40vw;
     background-color: $primary;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .cta {
+        width: 50%;
+        img {
+            height: 60px;
+            width: auto;
+        }
+        p {margin-bottom: 30px;}
+        a {
+            background-color: $secondary;
+            padding: 10px 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+    .quote {
+        font-size: 20px;
+        width: 25%;
+    }   
+}
+
+.section.secondary {
+    background-color: $secondary;
+    margin: 0 auto;
+    padding: 50px;
+    width: 40vw;
+    color: $primary;
+    .cta {
+        img {
+            filter: brightness(1) invert(1);
+        }
+        a {
+            background-color: $primary;
+            color: $secondary;
+        }
+    }
 }

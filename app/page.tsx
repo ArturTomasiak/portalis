@@ -8,8 +8,8 @@ export default function Home() {
                 <img src="/portalis.webp" alt="portalis logo"/>
             </div>
             <div className="companies">
-                <img src="/seaglobal.svg" alt="sea global logo"/>
                 <img className="slipform" src="/slipform.webp" alt="slipform logo" />
+                <img src="/seaglobal.webp" alt="sea global logo"/>
             </div>
         </header>
         <main>
@@ -17,11 +17,11 @@ export default function Home() {
                 <div className="cta">
                     <img src="/portalis_search.webp" alt="portalis logo"/>
                     <p>Portalis Search analyzes ports against key criteria such as storage capacity, berth depth, quay specifications, crane availability, vessel limitations, and distance to the offshore location. The result is a clear list of ports that meet your storage, berth, and lifting requirements, ranked by proximity and operational suitability.</p>
+                    <a href="/search">portalis search</a>
                 </div>
                 <div className="quote">
                     <p>Identify the most suitable ports for your offshore project with a ranked shortlist based on your operational requirements.</p>
                 </div>
-                <a href="/search">portalis search</a>
             </div>
             <div className="section secondary">
                 <div className="cta">
@@ -31,6 +31,19 @@ export default function Home() {
                 </div>
                 <div className="quote">
                     <p>Structured, project-specific port report prepared for offshore wind farm planning, logistics, and decision-making.</p>
+                </div>
+            </div>
+            <div className="section contact">
+                <div>
+                    <p className="qoute">contact</p>
+                </div>
+                <div>
+                    <p>Artur Tomasiak</p>
+                    <p>arturkrystiantomasiak@gmail.com</p>
+                </div>
+                <div>
+                    <p>Nadia Zarańska</p>
+                    <p>nadiazaranska@gmail.com</p>
                 </div>
             </div>
         </main>

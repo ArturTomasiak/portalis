@@ -50,7 +50,7 @@ export default async function Home({ searchParams }: SearchPageProps) {
 
         <div className="companies">
           <img className="slipform" src="/slipform.webp" alt="slipform logo" />
-          <img className="seaglobal" src="/seaglobal.svg" alt="sea global logo" />
+          <img className="seaglobal" src="/seaglobal.webp" alt="sea global logo" />
         </div>
       </header>
 

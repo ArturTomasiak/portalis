@@ -27,9 +27,6 @@ header {
             height: 30px;
             width: auto;
         }
-        img.seaglobal {
-            filter: brightness(0) invert(1);
-        }
         .slipform {
             transform: translateY(-4px);
         }
@@ -44,7 +41,8 @@ header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
 
   font-family: "Arial Narrow", Arial, sans-serif;
 
