@@ -73,6 +73,9 @@ export default async function Home({ searchParams }: SearchPageProps) {
           />
         </div>
       </main>
+      <a className="go-back-button" href="/">
+        Go back
+        </a>
     </body>
   );
 }

@@ -218,7 +218,6 @@ header {
     margin: 50px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
     .title {
         color: $secondary;
         p {
@@ -247,8 +246,16 @@ header {
   font-size: 14px;
 }
 
+.result-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .port-card {
-  width: 100%;
+  width: 480px;
   max-width: 1120px;
   min-height: 160px;
   box-sizing: border-box;
@@ -400,4 +407,20 @@ header {
   .port-card {
     grid-template-columns: 1fr;
   }
+}
+
+.go-back-button {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 1000;
+
+  padding: 12px 18px;
+  border-radius: 18px;
+  background-color: $secondary;
+  color: $primary;
+
+  font-size: 12px;
+  line-height: 1;
+  text-decoration: none;
 }

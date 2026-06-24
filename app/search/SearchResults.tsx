@@ -27,11 +27,11 @@ export default function SearchResults({
   }
 
   return (
-    <>
+    <div className="result-container">
       {results.map((result) => (
         <PortCard key={result.id} result={result} />
       ))}
-    </>
+    </div>
   );
 }
 
@@ -78,8 +78,6 @@ function PortCard({ result }: { result: PortResultWithWeather }) {
           </div>
         </label>
       </div>
-
-      <div className="port-card__placeholder" />
 
       <div className="weather-analysis">
         <h3>Weather analysis:</h3>

@@ -1,7 +1,200 @@
 @use "@/app/variables.scss" as *;
 
 body {
+  margin: 0;
+  padding: 0;
+  background-color: $primary;
+}
+
+header {
+  background-color: $primary;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    img {
+      height: 60px;
+      width: auto;
+    }
+  }
+
+  .companies {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    img {
+      height: 30px;
+      width: auto;
+    }
+
+    img.seaglobal {
+      filter: brightness(0) invert(1);
+    }
+
+    .slipform {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.report-page {
+  background-color: $primary;
+}
+
+.report-search {
+  background-color: $secondary;
+  color: $primary;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  h1 {
     margin: 0;
-    padding: 0;
+    font-size: 48px;
+  }
+
+  .eyebrow {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 14px;
+  }
+
+  .subtitle {
+    margin: 10px 0 0;
+    max-width: 620px;
+  }
+}
+
+.report-form {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 700;
+  }
+
+  select {
+    min-width: 280px;
+    padding: 14px 16px;
+    border: 2px solid $primary;
+    background-color: white;
+    color: $primary;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 15px 24px;
+    border: 2px solid $primary;
     background-color: $primary;
+    color: $secondary;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.report-preview {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.report-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  a {
+    background-color: $secondary;
+    color: $primary;
+    text-decoration: none;
+    padding: 14px 22px;
+    font-weight: 700;
+  }
+}
+
+.report-document {
+  background-color: $secondary;
+  color: $primary;
+  padding: 40px;
+  line-height: 1.55;
+
+  h2 {
+    margin: 0 0 18px;
+    font-size: 36px;
+  }
+
+  h3 {
+    margin: 26px 0 10px;
+    font-size: 24px;
+  }
+
+  p {
+    margin: 8px 0;
+  }
+
+  .report-space {
+    height: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  header,
+  .report-search,
+  .report-preview {
+    padding: 30px;
+    margin: 0;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .report-search {
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  .report-form {
+    width: 100%;
+
+    label,
+    select,
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.go-back-button {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 1000;
+
+  padding: 12px 18px;
+  border-radius: 18px;
+  background-color: $secondary;
+  color: $primary;
+
+  font-size: 12px;
+  line-height: 1;
+  text-decoration: none;
 }
