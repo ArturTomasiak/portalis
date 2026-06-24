@@ -228,3 +228,178 @@ header {
         }
     }
 }
+
+.search {
+  .vessel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .vessel-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.search-empty {
+  color: $secondary;
+  margin: 0;
+  font-size: 14px;
+}
+
+.port-card {
+  width: 100%;
+  max-width: 1120px;
+  min-height: 160px;
+  box-sizing: border-box;
+  padding: 18px 22px;
+  background-color: $secondary;
+  color: $primary;
+  display: grid;
+  grid-template-columns: 185px minmax(220px, 1fr) 260px;
+  gap: 30px;
+  align-items: stretch;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.port-card__info {
+  h2 {
+    margin: 0 0 20px;
+    font-size: 26px;
+    line-height: 1;
+  }
+}
+
+.result-field {
+  display: block;
+  margin-bottom: 13px;
+
+  > span {
+    display: block;
+    max-width: 150px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+
+  input {
+    width: 65px;
+    height: 25px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: #fff;
+    color: $primary;
+    font-family: inherit;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.result-input {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.port-card__placeholder {
+  background-color: #d9d9d9;
+  min-height: 160px;
+}
+
+.weather-analysis {
+  min-width: 0;
+
+  h3 {
+    margin: 5px 0 8px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+.weather-dates {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 3px;
+
+  button {
+    flex: 0 0 auto;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    color: $primary;
+    font-family: inherit;
+    font-size: 10px;
+    line-height: 1;
+    cursor: pointer;
+
+    &.active {
+      border-bottom-color: $primary;
+    }
+  }
+}
+
+.weather-box {
+  height: 78px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 6px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.weather-metric {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 9px;
+  line-height: 1.25;
+
+  span:last-child {
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+.warning {
+  margin-top: 8px;
+
+  h4 {
+    margin: 0 0 3px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 0 3px;
+    font-size: 9px;
+    line-height: 1.25;
+    white-space: pre-line;
+  }
+}
+
+.weather-empty {
+  margin: 0;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .port-card {
+    grid-template-columns: 1fr;
+  }
+}
