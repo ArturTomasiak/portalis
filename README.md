@@ -1,36 +1,69 @@
-# portalis
 
-This is a hackaton project for "IV Kongres Polskie Porty 2030" created in 24 hours.
+Portalis is a maritime logistics prototype for comparing ports against offshore project requirements. It was created in 24 hours for **IV Kongres Polskie Porty 2030** by **Nadia Zarańska** and **Artur Tomasiak**.
 
-Team: Nadia Zarańska, Artur Tomasiak
+The goal is to make early port selection faster by collecting fragmented port, terminal, berth, crane, vessel, storage, shipowner, weather and operational-condition data in one place, then turning it into a searchable shortlist and exportable port report.
 
-Goal: Create a system that would help with the logistical decision making when developing offshore projcets
+## Why Portalis exists
 
-## the problem
+Choosing a port for an offshore project is difficult because the decision depends on many operational constraints at once:
 
-Choosing the right port is a serious problem for offshore project develoeprs. Financial losses and operational delays could occur for reasons relating to:
+- berth length, depth, draft, LOA and beam limits,
+- storage and laydown capacity,
+- crane lifting capacity, outreach and hook height,
+- vessel compatibility,
+- distance from the offshore location,
+- weather and marine warnings,
+- access channels, seasonal restrictions and local operational notes,
+- non-public information such as availability, pricing and final terminal confirmation.
 
-- lack of cranes reaching lifting and outreach capacity
-
-- berths not meeting the requirements to store required ship
-
-- poor weather conditions
-
-Making a sufficient report on which port is the best candidate for the project is expensive as well as time consuming. The biggest problem is data, which is fragmented and often not publicly available. Having all relevant information about the port, shipowners, available equipments, weather conditions and atmospheric warnings in one place would in itself be valuable. Analysing said data to output which ports are most worth considering would make the process of choosing a port tens of times more efficient.
+A traditional feasibility report is time-consuming because relevant information is spread across port pages, terminal operators, shipowners, nautical sources and direct commercial communication. Portalis is an early screening tool: it helps identify which ports are worth investigating first.
 
 ## the product
 
  <tr> <td><img src="screenshots/landing-page.png" alt="shrek" height="200"></td> <td><img src="screenshots/search.png" alt="kanji" height="200"></td> <td><img src="screenshots/report.png" alt="abstract art" height="200"></td> </tr> </table>
 
-portalis is one system that handles two applications
+### Portalis Search
 
-**search** - port comparison system; input offshore projet coordinates and port requirements to get a list of ports that meed said requirements from closest to furthest relative to given coordinates alongside forecast data with warnings about the wether whenever applicable.
+Search compares seeded ports against project requirements and returns a ranked shortlist.
 
-**report** - document generator summarizing the database information on chosen port; meant for further llm integration
+Current filters include:
 
-Project's potential lies in search. In cooperation with ports and shipowners, search could be the standard for having all the vital information in one place alongside price estimates 
+- offshore coordinates,
+- minimum number of matching berths,
+- minimum storage area,
+- minimum crane count,
+- minimum crane lifting capacity,
+- minimum crane outreach,
+- minimum crane hook height.
+- port's operational months
 
-## techincal details 
+Results are sorted from closest to furthest when offshore coordinates are provided. Distance is calculated with the Haversine formula, so it is a simple point-to-point estimate rather than a navigational route.
+
+Each result also includes weather analysis for the port, using marine and wind forecast data. Estimated price is intentionally left as `TBA` in the prototype because pricing requires direct operator or shipowner confirmation.
+
+### Portalis Report
+
+The report module generates structured documentation for a selected seeded port. It summarizes available database information such as:
+
+- general port data,
+- terminals,
+- berths,
+- storage areas,
+- cranes,
+- approach channels,
+- seasonal or operational conditions,
+- related shipowners and contact references.
+
+Reports can be downloaded as **DOCX** or **PDF**.
+
+## Tech stack
+
+- **Next.js**
+- **React**
+- **TypeScript**
+- **SCSS / Sass**
+- **better-sqlite3** for local SQLite access
+- **Open-Meteo Marine API** and **Open-Meteo Forecast API** for weather and maritime conditions
 
 All engineering decisions were made with the goal of faster R&D. Production would require:
 
@@ -38,8 +71,26 @@ All engineering decisions were made with the goal of faster R&D. Production woul
 
 - change of environments - node.js won't do for scalable data analysis and mathematics.
 
-The project's only requirement is node.js installed. 'npm instal' within the cloned repository, then 'npm run build' and 'npm run start' to demo the project.
+### installing the project
 
-The dabatabase is handled with better-sqlite3 for convinience, the database file, creation scripts as well as inserts are in `/storage`.
+```bash
+git clone https://github.com/ArturTomasiak/portalis.git
+cd portalis
+npm install
+```
 
-The distance is calculated using the Haversine formula, which is a naive point to point measurment that doesn't take under consideration the actual path a ship would take.
+### running the project
+
+```bash
+npm run build
+```
+
+```bash
+npm run start
+```
+
+Open the local Next.js URL shown in the terminal, usually:
+
+```txt
+http://localhost:3000
+```
