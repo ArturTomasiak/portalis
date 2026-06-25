@@ -42,4 +42,4 @@ The project's only requirement is node.js installed. 'npm instal' within the clo
 
 The dabatabase is handled with better-sqlite3 for convinience, the database file, creation scripts as well as inserts are in `/storage`.
 
-The distance is calculated using the Haversine formula, which is a naive point to point measurment.
+The distance is calculated using the Haversine formula, which is a naive point to point measurment that doesn't take under consideration the actual path a ship would take.
