@@ -27,7 +27,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "polaris",
+  title: "portalis",
   description: "Your tool for maritime logistics analysis",
 };
 
