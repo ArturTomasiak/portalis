@@ -20,7 +20,7 @@ A traditional feasibility report is time-consuming because relevant information 
 
 ## the product
 
- <tr> <td><img src="screenshots/landing-page.png" alt="shrek" height="200"></td> <td><img src="screenshots/search.png" alt="kanji" height="200"></td> <td><img src="screenshots/report.png" alt="abstract art" height="200"></td> </tr> </table>
+ <tr> <td><img src="screenshots/landing-page.png" alt="shrek" height="150"></td> <td><img src="screenshots/search.png" alt="kanji" height="150"></td> <td><img src="screenshots/report.png" alt="abstract art" height="150"></td> </tr> </table>
 
 ### Portalis Search
 
